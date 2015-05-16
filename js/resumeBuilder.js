@@ -6,7 +6,7 @@ var bio = {
         email: 'john.doe@example.com',
         github: 'http://github.com',
         twitter: '@jdoe',
-        location: 'Germany'
+        location: 'Stuttgart, Germany'
     },
     welcomeMessage: 'Welcome',
     skills: ['HTML', 'CSS', 'Javascript', 'jQuery'],
@@ -147,3 +147,4 @@ bio.display();
 work.display();
 education.display();
 projects.display();
+$("#mapDiv").append(googleMap);
