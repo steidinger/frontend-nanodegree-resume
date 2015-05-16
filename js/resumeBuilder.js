@@ -147,11 +147,19 @@ var projects = {
     }
 };
 
+function addMap() {
+    $("#mapDiv").append(googleMap);
+}
+
+function initCollapsibleSections() {
+    $("section h2").on("click", function (event) {
+        $(event.currentTarget).closest("section").toggleClass("collapsed");
+    });
+}
+
 bio.display();
 work.display();
 education.display();
 projects.display();
-$("#mapDiv").append(googleMap);
-$("section h2").on("click", function (event) {
-
-});
+addMap();
+initCollapsibleSections();

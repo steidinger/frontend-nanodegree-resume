@@ -213,3 +213,25 @@ span {
     display: block;
   }
 }
+
+section h2 {
+  cursor: pointer;
+}
+
+section h2:after{
+  content: "\25bc";
+  margin-left: 2rem;
+}
+
+section.collapsed h2:after{
+  content: "\25c0";
+  margin-left: 2rem;
+}
+
+.collapsed .work-entry, .collapsed .education-entry, .collapsed .project-entry, .collapsed #map, .collapsed h3 {
+  display: none;
+}
+
+#mapDiv.collapsed {
+  height: auto;
+}
