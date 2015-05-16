@@ -118,6 +118,16 @@ var work = {
 var projects = {
     projects: [
         {
+            title: 'Photography',
+            dates: '2000 - present',
+            description: 'Taking lots and lots of photographs',
+            images: [
+                'images/project1-1x.jpg',
+                'images/project2-1x.jpg',
+                'images/project3-1x.jpg'
+            ]
+        },
+        {
             title: 'Nanodegree Frontend Developer Portfolio',
             dates: '5/2015 -5/2015',
             description: 'Responsive web site showing a project portfolio. Does not use Javascript, only HTML and CSS',

@@ -15,7 +15,7 @@
 
 h1 {
   font-size: 40px;
-  color: #F5A623;
+  color: #E8EAF6;
   line-height: 48px;
   display: inline;
 }
@@ -73,7 +73,7 @@ p {
 }
 
 a {
-  color: #1199C3;
+  color: #5C6BC0;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -87,16 +87,16 @@ a {
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color: #E8EAF6;
   display: none;
 }
 
 .orange {
-  background-color: #F5AE23;
+  background-color: #E8EAF6;
 }
 
 .orange-text {
-  color: #F5AE23;
+  color: #E8EAF6;
 }
 
 .white-text {
@@ -110,13 +110,13 @@ a {
   clear:both;
 }
 
-.dark-gray {
-  background-color: #4A4A4A;
+footer {
+  background-color: #1A237E;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #1A237E;
 }
 
 .flex-box {
@@ -234,4 +234,8 @@ section.collapsed h2:after{
 
 #mapDiv.collapsed {
   height: auto;
+}
+
+header span {
+  color: #E8EAF6;
 }
