@@ -56,25 +56,27 @@ var education = {
     ],
     display: function () {
         var placeholder = '%data%';
+        var $education = $("#education");
 
         education.schools.forEach(function (school) {
-            var html = HTMLschoolStart;
-            html += HTMLschoolName.replace(placeholder, school.name);
+            var html = HTMLschoolName.replace(placeholder, school.name);
             html += HTMLschoolDegree.replace(placeholder, school.degree);
             html += HTMLschoolDates.replace(placeholder, school.dates);
             html += HTMLschoolLocation.replace(placeholder, school.location);
             html += HTMLschoolMajor.replace(placeholder, school.majors);
-            $('#education').append(html);
+            $education.append(HTMLschoolStart);
+            $education.find(".education-entry:last").append(html);
         });
 
         if (education.onlineCourses) {
-            $('#education').append(HTMLonlineClasses);
+            $education.append(HTMLonlineClasses);
             education.onlineCourses.forEach(function (course) {
                 var html = HTMLonlineTitle.replace(placeholder, course.title);
                 html += HTMLonlineSchool.replace(placeholder, course.school);
                 html += HTMLonlineDates.replace(placeholder, course.date);
                 html += HTMLonlineURL.replace(placeholder, course.url);
-                $('#education').append(html);
+                $education.append(HTMLonlineClassStart);
+                $education.find(".education-entry:last").append(html);
             });
         }
     }
@@ -99,15 +101,16 @@ var work = {
     ],
     display: function () {
         var placeholder = '%data%';
+        var $workExperience = $("#workExperience");
 
         work.jobs.forEach(function (job) {
-            var html = HTMLworkStart;
-            html += HTMLworkEmployer.replace(placeholder, job.employer);
+            var html = HTMLworkEmployer.replace(placeholder, job.employer);
             html += HTMLworkTitle.replace(placeholder, job.title);
             html += HTMLworkDates.replace(placeholder, job.dates);
             html += HTMLworkLocation.replace(placeholder, job.location);
             html += HTMLworkDescription.replace(placeholder, job.description);
-            $('#workExperience').append(html);
+            $workExperience.append(HTMLworkStart);
+            $workExperience.find('.work-entry:last').append(html);
         })
     }
 };
@@ -129,16 +132,17 @@ var projects = {
     ],
     display: function () {
         var placeholder = '%data%';
+        var $projects = $("#projects");
 
         projects.projects.forEach(function (project) {
-            var html = HTMLprojectStart;
-            html += HTMLprojectTitle.replace(placeholder, project.title);
+            var html = HTMLprojectTitle.replace(placeholder, project.title);
             html += HTMLprojectDates.replace(placeholder, project.dates);
             html += HTMLprojectDescription.replace(placeholder, project.description);
             project.images.forEach(function (image) {
                 html += HTMLprojectImage.replace(placeholder, image);
             });
-            $('#projects').append(html);
+            $projects.append(HTMLprojectStart);
+            $('#projects').find(".project-entry:last").append(html);
         })
     }
 };
@@ -148,3 +152,6 @@ work.display();
 education.display();
 projects.display();
 $("#mapDiv").append(googleMap);
+$("section h2").on("click", function (event) {
+
+});
